@@ -31,7 +31,7 @@ Joyce Robbins
 
 4.  Open it in Chrome on half the screen, and keep RStudio (or whatever text editor you're using) open on the other half of the screen.
 
-5.  Make a change to the .html file, save it and refresh the file in the browser to see it. (Keyboard shortcuts &\#2318s; and &\#2318r;)
+5.  Make a change to the .html file, save it and refresh the file in the browser to see it. (Keyboard shortcuts &#2318s; and &#2318r;)
 
 ### References
 

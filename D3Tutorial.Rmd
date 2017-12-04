@@ -16,11 +16,9 @@ knitr::opts_chunk$set(echo = TRUE, cache = TRUE,
 
 ### HTML
 
-1. Here is the structure of a  .html document, which consists of a "head" and a "body".  Add a title and various elements to the body, such as headers and paragraphs:
+1. Create a text file in RStudio\* (File, New File, Text File)  (\* or whatever text editor you are using) 
 
-    \<h3>This is an h3 header.\</h3>
-    
-    \<p>This is a paragraph.\</p>
+1. Here is the structure of a simple .html document, which consists of a "head" and a "body".  Type it in and save the file as "myfile.html"
 
     ```
     <!DOCTYPE html>
@@ -34,12 +32,22 @@ knitr::opts_chunk$set(echo = TRUE, cache = TRUE,
     </html>
     ```
 
-1. Save the file.
+1. Add a title (doesn't appear on the web page itself) to the *head* section and various elements to the *body*, such as headers and paragraphs:
 
-1. Open it in Chrome on half the screen, and keep RStudio (or whatever text editor you're using) open on the other half of the screen.
+    \<h3>This is an h3 header.\</h3>
+    
+    \<p>This is a paragraph.\</p>
+
+1. Open it in Chrome on half the screen, and keep RStudio (or whatever text editor you're using) open on the other half of the screen. 
+
+1. Make a change to the .html file, save it and refresh the file in the browser to see it.  (Keyboard shortcuts &#2318s; and &#2318r;)
 
 
 
-References
+### References
+
+Best for complete beginners:
+
+Scott Murray 
 
 * Curran Kelleher 

@@ -1,0 +1,45 @@
+---
+title: "D3 Tutorial"
+author: "Joyce Robbins"
+date: "2017-12-03"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = TRUE,
+                      error = TRUE)
+```
+
+### Before Class
+
+1. If you don't have it already, download the Chrome browser.
+
+### HTML
+
+1. Here is the structure of a  .html document, which consists of a "head" and a "body".  Add a title and various elements to the body, such as headers and paragraphs:
+
+    \<h3>This is an h3 header.\</h3>
+    
+    \<p>This is a paragraph.\</p>
+
+    ```
+    <!DOCTYPE html>
+    <html lang="en">
+	    <head>
+		    <meta charset="utf-8">
+		    <title></title>
+	    </head>
+	    <body>
+	    </body>
+    </html>
+    ```
+
+1. Save the file.
+
+1. Open it in Chrome on half the screen, and keep RStudio (or whatever text editor you're using) open on the other half of the screen.
+
+
+
+References
+
+* Curran Kelleher 

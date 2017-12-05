@@ -99,11 +99,11 @@ Combine multiple style instructions on the same line:
 
 1. #### Create an SVG element in `myfile.html`
     (@) Add the following immediately after the `<body>` tag.    
-    `<svg width = "500" height = "500"></svg>`    
+    `<svg width = "500" height = "400"></svg>`    
     (@) Save and refresh in the browser... what happened?  
 1. #### Add shapes to the SVG element (inbetween the `<svg>` and `</svg>` tags
     (@) Add a rectangle (that fills the "canvas"):
-    `<rect x="0" y = "0" width = "500" hieght = "500" fill = "aquamarine"></rect>`  
+    `<rect x="0" y = "0" width = "500" height = "400" fill = "aquamarine"></rect>`  
     (@) Add other shapes, such as:
 		`<circle cx="150" cy="150" r="50" fill="blue"></circle>`
     (@) See here for inspiration: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes

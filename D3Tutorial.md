@@ -105,12 +105,12 @@ Joyce Robbins
 1.  #### Create an SVG element in `myfile.html`
 
     1.  Add the following immediately after the `<body>` tag.
-        `<svg width = "500" height = "500"></svg>`
+        `<svg width = "500" height = "400"></svg>`
     2.  Save and refresh in the browser... what happened?
 
 2.  #### Add shapes to the SVG element (inbetween the `<svg>` and `</svg>` tags
 
-    1.  Add a rectangle (that fills the "canvas"): `<rect x="0" y = "0" width = "500" hieght = "500" fill = "aquamarine"></rect>`
+    1.  Add a rectangle (that fills the "canvas"): `<rect x="0" y = "0" width = "500" height = "400" fill = "aquamarine"></rect>`
     2.  Add other shapes, such as: `<circle cx="150" cy="150" r="50" fill="blue"></circle>`
     3.  See here for inspiration: <https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes>
     4.  Style your shapes with inline CSS: <https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes>

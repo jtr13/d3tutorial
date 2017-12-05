@@ -2,24 +2,26 @@
 title: "D3 Tutorial"
 author: "Joyce Robbins"
 date: "2017-12-03"
-output: github_document
+output: 
+  github_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, cache = TRUE,
+knitr::opts_chunk$set(echo = FALSE, cache = TRUE,
                       error = TRUE)
 ```
 
-### Before Class
+
+### Setup
 
 1. If you don't have it already, download the Chrome browser.
 
 ### HTML
 
-1. Create a text file in RStudio\* (File, New File, Text File)  (\* or whatever text editor you are using) 
-
-1. Here is the structure of a simple .html document, which consists of a "head" and a "body".  Type it in and save the file as "myfile.html"
-
+1. #### Create an .html file and view it with Chrome Developer Tools
+    (@) Create a text file in RStudio\* (File, New File, Text File)  (\* or whatever text editor you are using) 
+    (@) Here is the structure of a simple .html document, which consists of a "head" and a "body".  Type it in and save the file as "myfile.html"
     ```
     <!DOCTYPE html>
     <html lang="en">
@@ -31,16 +33,82 @@ knitr::opts_chunk$set(echo = TRUE, cache = TRUE,
 	    </body>
     </html>
     ```
+    (@) Add a title (doesn't appear on the web page itself) to the *head* section and various elements to the *body*, such as headers and at least three paragraph elements, such as:
+    ```
+    <h3>This is an h3 header.</h3> 
+    <p>This is a paragraph.</p> 
+    <p>This is another paragraph.</p>
+    <p>This is a third paragraph.</p>
+    ```
+    (@) Open it in Chrome on half the screen, and keep RStudio (or whatever text editor you're using) open on the other half of the screen. 
 
-1. Add a title (doesn't appear on the web page itself) to the *head* section and various elements to the *body*, such as headers and paragraphs:
+    (@) Make a change to the .html file, save it and refresh the file in the browser to see it. (Keyboard shortcuts such as cmd-s and cmd-r are helpful.)
 
-    \<h3>This is an h3 header.\</h3>
+    (@) In Chrome, **View  Developer  Developer Tools** to view *DOM elements.*
+
+### D3 (text only... no graphics)
+
+1. #### Select an element with `d3.select` and remove it
+    (@) To use D3 we need to access a D3 library, which takes the form of a file ending in .js.  We can either download it or link to it online.  We'll do the latter by adding the following line immediately after the title line in the head section of our html file:  
+    `<script src="https://d3js.org/d3.v4.min.js"></script>`  
+    (Source: https://www.d3js.org)  
+    (@) Save the file, go back to Chrome, refresh the page and click on "Console" next to the "Elements" tab. 
+    (@) Type the following in the console:  
+    `> d3.select("p").remove()`  
+    What happened?  
+    (@) Refresh the page.  What happened?  
+1. #### Select an element with `d3.select` and style it
+    (@) Try the following (or variations thereof):  
+    ```
+    > d3.select("p").style("color", "blue")
+    > d3.select("p").style("background-color", "yellow")
+    > d3.select("p").style("font-size", "24px")
+    > d3.select("p").style("font-weight", "bold")
+    ```  
+    (Refresh) 
+1. #### Select multiple elements with `d3.selectAll` and style them:    
+    `> d3.selectAll("p").style("color", "purple")`
+
+1. #### Assign a selection to a variable and style it
+
+    (@) Type the following in the console:  
+    (Note: `var` is JavaScript, not D3 per se).  
+    ```
+    > var columbia = d3.selectAll("p")
+    > columbia.style("background-color", "green")
+    ```
+    (@) Make other changes using "columbia" instead of `d3.selectAll("p")`.
     
-    \<p>This is a paragraph.\</p>
+1. #### Chaining
+Combine multiple style instructions on the same line:
 
-1. Open it in Chrome on half the screen, and keep RStudio (or whatever text editor you're using) open on the other half of the screen. 
+    `> columbia.style("color", "red").style("font-size", "30px")`
 
-1. Make a change to the .html file, save it and refresh the file in the browser to see it.  (Keyboard shortcuts &#2318s; and &#2318r;)
+1. #### Add an element with `d3.append`  
+    (@) Type the following in the console:
+    ```
+    > var nyc = d3.select("body")
+    > nyc.append("h1")
+    > d3.select("h1").text("This is an h1 header.")
+    ```  
+    (@) Check the *Elements* tab and observe what has changed.
+    
+### SVG
+
+1. #### Create an SVG element in `myfile.html`
+    (@) Add the following immediately after the `<body>` tag.    
+    `<svg width = "500" height = "500"></svg>`    
+    (@) Save and refresh in the browser... what happened?  
+1. #### Add shapes to the SVG element (inbetween the `<svg>` and `</svg>` tags
+    (@) Add a rectangle (that fills the "canvas"):
+    `<rect x="0" y = "0" width = "500" hieght = "500" fill = "aquamarine"></rect>`  
+    (@) Add other shapes, such as:
+		`<circle cx="150" cy="150" r="50" fill="blue"></circle>`
+    (@) See here for inspiration: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
+    (@) Style your shapes with inline CSS: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
+    (@) Create an original piece of art!  
+    (@) Advanced svg: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths 
+
 
 
 

@@ -8,7 +8,6 @@ Joyce Robbins
 -   [D3 (+ text)](#d3-text)
 -   [SVG](#svg)
 -   [D3 (+ SVG) in the console](#d3-svg-in-the-console)
--   [D3 (+ SVG) in the .html file](#d3-svg-in-the-.html-file)
 -   [References](#references)
 
 ### Setup
@@ -164,23 +163,27 @@ Joyce Robbins
 
             > d3.select("circle").transition().duration(5000).attr("fill", "white").attr("cx","250").attr("cy","250").attr("r","25");
 
-### D3 (+ SVG) in the .html file
+    5.  Try other transitions, such as:
 
-1.  #### Create transitions that happen when the web page is loaded
+    <!-- -->
 
-    1.  Add the following to `myfile.html` at the *end* of the body section (right before `</body>`):
-
-            <script type = "text/javascript">
-            d3.select("circle").transition().duration("5000").
-            attr("cx", "300").attr("cy","300").attr("fill","green");
-            </script>
-
-    2.  Save it and refresh in the browser.
-    3.  Add additional transitions.
+        > var circles = d3.selectAll("circle");
+        > circles.transition().duration(1000).attr("r", "25")
+            > circles.transition().duration(1000).attr("fill", "red")
+            > circles.transition().duration(1000).attr("transform", "rotate (180, 200, 200)")
+            > circles.transition().duration(500).attr("transform", "rotate (90, 200, 200)")
+            > circles.transition().duration(500).attr("transform", "rotate (180, 200, 200)");
+            > d3.select("polygon").transition().duration(3000).attr("transform", "translate (200, 100)")
+            > d3.select("polygon").transition().duration(3000).attr("transform", "rotate (-45)")
+            > d3.select("polygon").transition().duration(3000).attr("transform", "rotate (0)")
 
 ### References
 
-These authors are absolutely the best teachers for complete beginners, *however*, free versions of their materials are only available for the previous version of D3 (version 3):
+#### Mike Bostock, "Overview" <https://d3js.org/>
+
+Straight from the source.
+
+The following authors are absolutely the best teachers for complete beginners, *however*, free versions of their materials are only available for the previous version of D3 (version 3):
 
 #### Curran Kelleher
 
